@@ -6,6 +6,17 @@
 - Flask Server
 - Front
 
+#### Inside Flask Server
+
+- Install flask first
+```
+pip install flask
+```
+- Run
+```
+python Server.py
+```
+
 #### Inside Front
 
 - To install all the dependent libraries
