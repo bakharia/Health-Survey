@@ -4,7 +4,7 @@ from urllib import response
 from flask import Flask, redirect
 import hashlib
 import random
-import requests
+#import requests
 import datetime
 
 app = Flask(__name__)
@@ -25,10 +25,10 @@ def fitbit_auth():
     sha = hashlib.sha256((code_verifier).encode())
     base64_url = sha.hexdigest()
     client_id = '2388WF'
-    client_secret = 'e89a56bec30278e4579225ec4ca3344c'
+    client_secret = '8df78a151b145b546f3eb1adfff63a1e'
     print(sha)
     return {'url':
-        [f'https://www.fitbit.com/oauth2/authorize?client_id={client_id}&response_type=code&code_challenge={base64_url}&code_challenge_method=S256&scope=heartrate']
+        [f'https://www.fitbit.com/oauth2/authorize?response_type=code&client_id={client_id}&code_challenge={base64_url}&code_challenge_method=S256&scope=heartrate']
     }
 
 
